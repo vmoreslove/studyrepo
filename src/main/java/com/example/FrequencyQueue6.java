@@ -25,23 +25,15 @@ public class FrequencyQueue6 {
         return maxHeap.peek(); // Возвращает элемент с максимальной частотой (не удаляет)
     }
 
-    // Дополнительно: удаление элемента с максимальной частотой
-    public String pollMostFrequent() {
-        String top = maxHeap.poll();
-        if (top != null) {
-            frequencyMap.remove(top);
-        }
-        return top;
-    }
     // Для теста
     public static void main(String[] args) {
         FrequencyQueue6 fq = new FrequencyQueue6();
         fq.add("apple");
         fq.add("banana");
         fq.add("apple");
+        fq.add("banana");
         fq.add("orange");
-        fq.add("orange");
-        fq.add("orange");
+        fq.add("banana");
 
         System.out.println("Most frequent: " + fq.getMostFrequent()); // banana
     }
