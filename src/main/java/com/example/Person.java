@@ -1,7 +1,6 @@
 
 package com.example;
 
-import java.util.Objects;
 
 class Person {
     String name;

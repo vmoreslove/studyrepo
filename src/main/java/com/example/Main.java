@@ -1,11 +1,10 @@
 package com.example;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
+import java.util.OptionalDouble;
 
 public class Main {
     public static void main(String[] args) {
-        // Список объектов Person
         List<Person> people = List.of(
                 new Person("Анна", 20),
                 new Person("Борис", 22),
@@ -15,31 +14,27 @@ public class Main {
                 new Person("Даша", 17),
                 new Person("Егор", 17),
                 new Person("Мария", 30),
-                new Person("Алексей", 20)
+                new Person("Алексей", 40)
         );
-
-        // 1. Выводим уникальные имена, отсортированные по алфавиту
         people.stream()
                 .map(person -> person.name)
                 .distinct()
                 .sorted()
                 .forEach(System.out::println);
+        OptionalDouble average = people.stream()
+                .mapToInt(Person::getAge)
+                .average();
 
-        /* 2. Вычисляем средний возраст
-        String result = people.stream()
-                .mapToInt(Person::getAge)  // Преобразуем Person в int (возраст)
-                .average()                 // Вычисляем среднее
-                .mapToObj(avg -> "Средний возраст: " + avg)  // Преобразуем OptionalDouble в строку
-                .orElse("Not found");      // Если пусто, возвращаем "Not found"
-
-        System.out.println(result);
-*/
-        // 3. Находим первого человека старше 30 лет
+        if (average.isPresent()) {
+            System.out.println("Среднее значение: " + average.getAsDouble());
+        } else {
+            System.out.println("Коллекция пуста, среднее значение не может быть вычислено.");
+        }
         Optional<Person> personOver30 = people.stream()
-                .filter(person -> person.getAge() > 30)  // Отбираем людей старше 30 лет
-                .findFirst();                           // Находим первого
+                .filter(person -> person.getAge() > 30)
+                .findFirst();
 
-        // Выводим результат: если есть человек старше 30 лет, выводим его, иначе "Not found"
+
         System.out.println(personOver30.map(person -> "Первый человек старше 30 лет: " + person)
                 .orElse("Not found"));
     }
