@@ -20,6 +20,7 @@ public class Main {
 
         System.out.println("персон и студент равны? " + mitya.equals(petya));
         System.out.println("Значение по персон: " + personMap.get(mitya)); // получит значение по ключу митя
+        System.out.println(s1.hashCode());
 
         for (Map.Entry<Person, String> entry : personMap.entrySet()) {
             System.out.println(entry.getKey() + " -> " + entry.getValue());
