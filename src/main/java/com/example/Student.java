@@ -1,6 +1,5 @@
 package com.example;
 
-import java.util.Objects;
 
 public class Student extends Person {
     int grade;
