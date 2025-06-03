@@ -12,6 +12,7 @@ public class Dog extends Animal {
         super(name);
         this.breed = breed;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
