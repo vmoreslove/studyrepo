@@ -1,5 +1,6 @@
 package com.example;
 
+
 public class Main {
     public static void main(String[] args) {
         Rectangle rectangle = new Rectangle();
@@ -7,5 +8,6 @@ public class Main {
 
     Circle circle = new Circle();
     circle.getArea();
+
     }
 }
