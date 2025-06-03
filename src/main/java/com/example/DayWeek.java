@@ -23,6 +23,7 @@ public enum DayWeek {
     public String toString() {
         return russianName;
     }
+
     public boolean isWeekend() {
         return this == SATURDAY || this == SUNDAY;
     }
