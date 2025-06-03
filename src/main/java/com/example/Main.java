@@ -15,11 +15,11 @@ public class Main {
         Student s1 = new Student("Анна", 20, 4);
         Student s2 = new Student("Анна", 20, 5);
 
-        System.out.println(s1.equals(s2)); // false — потому что grade разный
+        System.out.println(s1.equals(s2)); 
 
 
         System.out.println("персон и студент равны? " + mitya.equals(petya));
-        System.out.println("Значение по персон: " + personMap.get(mitya)); // получит значение по ключу митя
+        System.out.println("Значение по персон: " + personMap.get(mitya)); 
         System.out.println(s1.hashCode());
 
         for (Map.Entry<Person, String> entry : personMap.entrySet()) {
