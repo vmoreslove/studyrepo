@@ -1,2 +1,0 @@
-# studyrepo
-educational repository
