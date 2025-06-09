@@ -1,20 +1,23 @@
 package com.example;
 
 public class Dog extends Animal{
-    private int age;
 
-    // Конструктор
-    public Dog(String name, int age) {
-        super("Найда"); // вызываем конструктор родителя
-        this.age = age;
+    public Dog(String name) {
+        super(name); // вызываем конструктор родителя
     }
+
     @Override
-    public void makeSound() {
-        System.out.println("гаав");
+    public void eat() {
+        System.out.println("я ем");
+    }
+
+    @Override
+    public void makeSound(){
+        System.out.println("gaav");
     }
 
     @Override
     public String toString() {
-        return "Собака по имени " + name + ", возраст: " + age;
+        return "Собака по имени " + name;
     }
 }
