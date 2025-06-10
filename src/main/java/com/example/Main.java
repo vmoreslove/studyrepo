@@ -5,12 +5,9 @@ public class Main {
         BankAccount bAccount = new BankAccount(10,15);
         bAccount.deposit(5);
         bAccount.withdraw(17);
-
-
         System.out.println(bAccount.getBalance());
 
     }
-
 }
 /*
 1. Инкапсуляция: Класс BankAccount
