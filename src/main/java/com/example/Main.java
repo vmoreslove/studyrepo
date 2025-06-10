@@ -19,7 +19,7 @@ public class Main {
         System.out.println(p1.hashCode());
         System.out.println(p1.equals(p2));
         System.out.println(s3.equals(s4));
-        //System.out.println(p1.toString());
+        System.out.println(p1);
     }
 
 }
